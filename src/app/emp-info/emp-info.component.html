@@ -1,0 +1,27 @@
+<button type="button" class="btn btn-primary" (click)="getInfo1()">Get Employee 1</button>
+
+<ul>
+    <li *ngFor="let info of info1">{{ info }}</li>
+</ul>
+<button type="button" class="btn btn-primary" (click)="getInfo2()">Get Employee 2</button>
+
+<ul>
+    <li *ngFor="let info of info2">{{ info }}</li>
+</ul>
+
+<button type="button" class="btn btn-primary" (click)="getInfo3()">Get Employee 3</button> 
+<ul>
+    <li *ngFor="let info of info3">{{ info }}</li>
+</ul> 
+
+<form #empForm="ngForm" (ngSubmit)="updateInfo(empForm)">
+    <div class="mb-3">
+        <label for="location" class="form-label">Employee Location</label>
+        <input type="text" class="form-control" id="location" name="location" ngModel>
+        <br />
+        <span *ngIf="empUpdated">Employee location updated successfully!</span>
+    </div>
+    <br />
+    <button type="submit" class="btn btn-success">Update Employee</button>
+
+</form>
