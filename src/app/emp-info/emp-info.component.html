@@ -1,0 +1,15 @@
+<button type="button" name="button" (click)="getInfoFromService1()">Get Info 1</button>
+
+<ul class="list-group">
+  <li class="list-group-item" *ngFor="let emp of infoReceived1">{{ emp }}</li>
+</ul>
+
+<button type="button" name="button" (click)="getInfoFromService2()">Get Info 2</button>
+<ul class="list-group">
+  <li class="list-group-item" *ngFor="let emp of infoReceived2">{{ emp }}</li>
+</ul>
+
+<button type="button" name="button" (click)="getInfoFromService3()">Get Info 3</button>
+<ul class="list-group">
+  <li class="list-group-item" *ngFor="let emp of infoReceived3">{{ emp }}</li>
+</ul>
