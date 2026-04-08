@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TextComponentComponent } from './text-component.component';
+import { EmpInfoComponent } from './emp-info.component';
 
-describe('TextComponentComponent', () => {
-  let component: TextComponentComponent;
-  let fixture: ComponentFixture<TextComponentComponent>;
+describe('EmpInfoComponent', () => {
+  let component: EmpInfoComponent;
+  let fixture: ComponentFixture<EmpInfoComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ TextComponentComponent ]
+      declarations: [ EmpInfoComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(TextComponentComponent);
+    fixture = TestBed.createComponent(EmpInfoComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
