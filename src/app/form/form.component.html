@@ -1,0 +1,32 @@
+<div class="center">
+    <h2> User Registration </h2>
+
+    <form #userForm="ngForm" (ngSubmit)="userSignup(userForm)">
+    <div class="form-group">
+        <label for="name">Name</label>
+        <input #name = "ngModel" type="text" required minlength="3" class="form-control" name="name" placeholder="Enter name" ngModel>
+        <div class="text-danger" *ngIf="name.invalid && name.touched"> 
+            <div *ngIf="name.errors?.['required']">Name is required</div>
+            <div *ngIf="name.errors?.['minlength']">Name must be at least 3 characters long</div>
+            <!-- <div *ngIf="name.errors?.['maxlength']">Name cannot be longer than 12 characters</div> -->
+        </div>
+    </div>
+    <pre></pre>
+    <div class="form-group">
+        <label for="email">Email address</label>
+        <input type="email" class="form-control" name="email" placeholder="Enter email" ngModel>
+    </div>
+    <pre></pre>
+    <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" class="form-control" name="password" placeholder="Password" ngModel>
+    </div>
+    <pre></pre>
+    <div class="form-group">
+        <label for="confirmPassword">Confirm Password</label>
+        <input type="password" class="form-control" name="confirmPassword" placeholder="Confirm Password" ngModel>
+    </div>
+    <pre></pre>
+    <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
